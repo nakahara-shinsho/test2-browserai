@@ -1,0 +1,20 @@
+{
+  "name": "test-browseai",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "node server.js"
+  },
+  "keywords": [],
+  "author": "xinxiao li",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@browserai/browserai": "^1.0.16",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
+}

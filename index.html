@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrowserAI Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            /*align-items: center;*/
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            /*text-align: center;*/
+        }
+        textarea {
+            line-height: 1.5; /* Adjust this value to change line spacing */
+        }
+        #output {
+            color: blue;
+        }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        function handleEnterKey(event) {
+            if (event.key === 'Enter' && event.shiftKey) {
+                event.preventDefault(); // Prevents the default action of the Enter key
+                LLMresponse(); // Calls your function
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>LLMに何を聞きたい？(入力確定： shift+enter)</h1>
+    <textarea id="userInput" rows="15" cols="100" placeholder="Type your question here..." onkeydown="handleEnterKey(event)"></textarea>
+    <br>
+    <!--button onclick="LLMresponse()">Submit</button> -->
+    <br>
+    <div id="output"></div>
+    
+</body>
+</html>
